@@ -50,4 +50,3 @@ Make sure your portfolio satisfies the following requirements before submitting 
 - [Neosoulink](https://nathan-mande.netlify.app)
 - [notstark](https://next-portfolio-stark.vercel.app)
 - [satnaing](https://satnaing.dev)
-- [wiscaksono](https://wiscaksono.com)

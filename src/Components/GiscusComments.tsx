@@ -7,9 +7,9 @@ const PortfolioComments = ({ username }: { username: string }) => {
     <Giscus
       id={`giscus-comments-${username}`}
       repo="notstark/devfolios"
-      repoId="R_kgDOQEqZkQ"
+      repoId="R_kgDOQErCqA"
       category="General"
-      categoryId="DIC_kwDOQEqZkc4CwyRQ"
+      categoryId="DIC_kwDOQErCqM4CwySq"
       mapping="specific"
       term={`portfolio-${username}`}
       reactionsEnabled="1"

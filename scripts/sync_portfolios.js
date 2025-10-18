@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import { sleep, fetchAgain, calculatePopularity, buildQuery } from "./utils.js";
 
 const GITHUB_TOKEN = process.env.FETCH_TOKEN;
-const UPDATE_INTERVAL_DAYS = 2;
+const UPDATE_INTERVAL_DAYS = 5;
 const PORTFOLIOS_DATA = "data/portfolios.json";
 const BATCH_SIZE = 30;
 const SLEEP_MS = 10000; // 10 seconds

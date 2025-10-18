@@ -346,7 +346,7 @@ export const AppSidebar = () => {
                   </div>
                 ))}
 
-                {filteredPortfolios?.length === 0 && !isPortfoliosPending && (
+                {filteredPortfolios?.length === 0 && !isPortfoliosPending  && (
                   <div className="text-center py-8 text-sm text-muted-foreground">
                     No portfolios found
                   </div>

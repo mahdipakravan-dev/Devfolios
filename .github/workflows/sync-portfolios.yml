@@ -12,7 +12,7 @@ jobs:
   update-periodically:
     runs-on: ubuntu-latest
     env:
-      FETCH_TOKEN: ${{ secrets.GITHUB_FETCH_TOKEN }}
+      FETCH_TOKEN: ${{ secrets.FETCH_TOKEN }}
 
     steps:
       - name: Checkout repository

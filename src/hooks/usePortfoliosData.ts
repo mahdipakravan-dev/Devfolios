@@ -2,7 +2,7 @@ import type { Portfolio } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 
 
-const MAIN_API = "https://github.com/NotStark/Devfolios/raw/refs/heads/main/data/portfolios.json";
+const MAIN_API = "https://raw.githubusercontent.com/NotStark/Devfolios/refs/heads/main/data/portfolios.json";
 const FALLBACK_API = "/data/portfolios.json";
 
 

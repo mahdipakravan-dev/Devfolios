@@ -12,7 +12,6 @@ Make sure your portfolio satisfies the following requirements before submitting 
 - **Effort in design**
 - **Responsive**
 - **Embeddable**
-- **written in English**
 - **one portfolio per GitHub username**
 
 ---

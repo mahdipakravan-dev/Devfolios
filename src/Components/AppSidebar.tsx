@@ -352,7 +352,7 @@ export const AppSidebar = () => {
                   </div>
                 )}
 
-                {isPortfoliosPending && (
+                {isPortfoliosPending && filterType === 'all' && (
                   <div className="text-center py-8 text-sm text-muted-foreground inline-flex mx-auto items-center justify-center gap-2">
                     <Loader className="size-4 animate-spin" /> Loading...
                   </div>

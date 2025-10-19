@@ -39,6 +39,7 @@ Make sure your portfolio satisfies the following requirements before submitting 
 - [antfu](https://antfu.me)
 - [aulianza](https://aulianza.id)
 - [braydoncoyer](https://www.braydoncoyer.dev)
+- [codewarnab](https://codewarnab.in/)
 - [devshinthant](https://devshinthant.vercel.app)
 - [Evavic44](https://victoreke.com)
 - [icantcodefyi](https://ani.ink)

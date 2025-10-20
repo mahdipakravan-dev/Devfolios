@@ -34,7 +34,7 @@ export default function App() {
   return (
     <>
       <AppSidebar />
-      <main className="flex-1 size-full bg-sidebar min-h-screen overflow-hidden   mx-auto scrollbar-h-px max-w-7xl ">
+      <main className="flex-1 size-full bg-sidebar min-h-screen overflow-hidden   mx-auto   ">
         {!isCollapased && (
           <AnimatePresence>
             <motion.div
@@ -56,7 +56,7 @@ export default function App() {
             },
           )}
         >
-          <nav className="relative flex h-12 w-full items-center border-t border-b">
+          <nav className="relative flex h-12 w-full items-center rounded-tl-lg border-t border-b">
             <div className="flex h-full flex-1 items-center gap-2 pl-4">
               <SidebarTrigger
                 className={cn({

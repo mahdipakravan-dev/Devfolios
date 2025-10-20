@@ -134,8 +134,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans overflow-hidden;
+    @apply bg-background text-foreground font-sans scrollbar scrollbar-w-1 scrollbar-thumb-ring  ;
   }
+
+
+
+
 
  
 }

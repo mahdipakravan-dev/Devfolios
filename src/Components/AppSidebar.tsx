@@ -140,7 +140,7 @@ export const AppSidebar = () => {
   }, [portfolios, favPortfolios, searchQuery, sortBy, filterType]);
 
   return (
-    <Sidebar className="!border-r-0">
+    <Sidebar className="!border-r-0 ">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -271,94 +271,94 @@ export const AppSidebar = () => {
             </Badge>
           </SidebarGroupLabel>
 
-          <SidebarGroupContent>
-            <div className="w-full overflow-y-auto h-[calc(100vh-20rem)] ] scrollbar-none">
-              <div className="space-y-2 pb-4 w-full">
-                {filteredPortfolios?.map((portfolio) => (
-                  <div
-                    id={`portfolio-${portfolio.username}`}
-                    key={portfolio.username}
-                    onClick={(e) => {
-                      setUsername(portfolio.username);
-                      setOpenMobile(false);
-                      e.currentTarget.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      });
-                    }}
-                  >
-                    <div
-                      className={cn(
-                        "group/card relative w-full p-3 rounded-lg border bg-card hover:bg-accent/50 transition-all duration-200 hover:shadow-md cursor-pointer",
-                        { "bg-accent": username === portfolio.username }
-                      )}
-                    >
-                      <div className="flex items-start gap-3">
-                        <Avatar className="size-10 ring ring-ring">
-                          <AvatarImage
-                            src={`https://github.com/${portfolio.username}.png`}
-                            alt={portfolio.name}
-                          />
-                          <AvatarFallback className="text-xs">
-                            {portfolio.name
-                              .split(" ")
-                              .map((n) => n[0])
-                              .join("")
-                              .toUpperCase()
-                              .slice(0, 2)}
-                          </AvatarFallback>
-                        </Avatar>
+          <SidebarGroupContent className="space-y-2 pb-4 px-1 w-full overflow-auto scrollbar-w-1 scrollbar">
 
-                        <div className="min-w-0 flex-1">
-                          <h3 className="font-semibold text-sm truncate group-hover/card:text-primary transition-colors">
-                            {portfolio.name}
-                          </h3>
-                          <p className="text-xs text-muted-foreground truncate">
-                            {new URL(portfolio.portfolioLink).hostname}
-                          </p>
-                        </div>
 
-                        <Button
-                          size="icon"
-                          variant="ghost"
-                          className={cn(
-                            "opacity-0 group-hover/card:opacity-100 transition-opacity",
-                            {
-                              "opacity-100": favUsernames.includes(
-                                portfolio.username
-                              ),
-                            }
-                          )}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleHeartClick(portfolio);
-                          }}
-                        >
-                          <Heart
-                            className={cn("size-4", {
-                              "fill-red-400 text-red-400":
-                                favUsernames.includes(portfolio.username),
-                            })}
-                          />
-                        </Button>
-                      </div>
+            {filteredPortfolios?.map((portfolio) => (
+              <div
+                id={`portfolio-${portfolio.username}`}
+                key={portfolio.username}
+                onClick={(e) => {
+                  setUsername(portfolio.username);
+                  setOpenMobile(false);
+                  e.currentTarget.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
+              >
+                <div
+                  className={cn(
+                    "group/card relative w-full p-3 rounded-lg border bg-card hover:bg-accent/50 transition-all duration-200 hover:shadow-md cursor-pointer",
+                    { "bg-accent": username === portfolio.username }
+                  )}
+                >
+                  <div className="flex items-start gap-3">
+                    <Avatar className="size-10 ring ring-ring">
+                      <AvatarImage
+                        src={`https://github.com/${portfolio.username}.png`}
+                        alt={portfolio.name}
+                      />
+                      <AvatarFallback className="text-xs">
+                        {portfolio.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")
+                          .toUpperCase()
+                          .slice(0, 2)}
+                      </AvatarFallback>
+                    </Avatar>
+
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-semibold text-sm truncate group-hover/card:text-primary transition-colors">
+                        {portfolio.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground truncate">
+                        {new URL(portfolio.portfolioLink).hostname}
+                      </p>
                     </div>
-                  </div>
-                ))}
 
-                {filteredPortfolios?.length === 0 && !isPortfoliosPending  && (
-                  <div className="text-center py-8 text-sm text-muted-foreground">
-                    No portfolios found
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className={cn(
+                        "opacity-0 group-hover/card:opacity-100 transition-opacity",
+                        {
+                          "opacity-100": favUsernames.includes(
+                            portfolio.username
+                          ),
+                        }
+                      )}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleHeartClick(portfolio);
+                      }}
+                    >
+                      <Heart
+                        className={cn("size-4", {
+                          "fill-red-400 text-red-400":
+                            favUsernames.includes(portfolio.username),
+                        })}
+                      />
+                    </Button>
                   </div>
-                )}
-
-                {isPortfoliosPending && filterType === 'all' && (
-                  <div className="text-center py-8 text-sm text-muted-foreground inline-flex mx-auto items-center justify-center gap-2">
-                    <Loader className="size-4 animate-spin" /> Loading...
-                  </div>
-                )}
+                </div>
               </div>
-            </div>
+            ))}
+
+            {filteredPortfolios?.length === 0 && !isPortfoliosPending && (
+              <div className="text-center py-8 text-sm text-muted-foreground">
+                No portfolios found
+              </div>
+            )}
+
+            {isPortfoliosPending && filterType === 'all' && (
+              <div className="text-center py-8 text-sm text-muted-foreground inline-flex mx-auto items-center justify-center gap-2">
+                <Loader className="size-4 animate-spin" /> Loading...
+              </div>
+            )}
+
+
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>

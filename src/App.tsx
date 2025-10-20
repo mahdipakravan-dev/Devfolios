@@ -34,7 +34,7 @@ export default function App() {
   return (
     <>
       <AppSidebar />
-      <main className="flex-1 overflow-hidden bg-sidebar">
+      <main className="flex-1 size-full bg-sidebar min-h-screen overflow-hidden   mx-auto scrollbar-h-px max-w-7xl ">
         {!isCollapased && (
           <AnimatePresence>
             <motion.div
@@ -50,7 +50,7 @@ export default function App() {
         )}
         <div
           className={cn(
-            "flex h-full flex-col items-center overflow-x-hidden rounded-tl-lg border-l bg-background",
+            "flex h-full flex-col items-center  rounded-tl-lg border-l bg-background",
             {
               "border-l-0": isCollapased || isMobile,
             },
@@ -146,8 +146,8 @@ export default function App() {
             </div>
           </nav>
 
-          <div className="w-full flex-1 overflow-y-auto lg:scrollbar-thin">
-            <div className="relative flex h-full w-full items-center justify-center">
+          <div className="w-full   overflow-y-auto lg:scrollbar-thin">
+            <div className="relative flex w-full h-screen items-center justify-center">
               <Resizable
                 defaultSize={{ width: "100%", height: "100%" }}
                 minWidth={300}

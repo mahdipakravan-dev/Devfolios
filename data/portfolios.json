@@ -1,14 +1,5 @@
 [
   {
-    "username": "Kalabasa",
-    "name": "Lean Rada",
-    "portfolioLink": "https://leanrada.com",
-    "followers": 264,
-    "stars": 2241,
-    "popularity": 2505,
-    "lastFetched": 1760955113348
-  },
-  {
     "name": "Alyssa X",
     "username": "alyssaxuu",
     "portfolioLink": "https://www.alyssax.com",
@@ -160,5 +151,14 @@
     "stars": 532,
     "popularity": 701,
     "lastFetched": 1761308610022
+  },
+  {
+    "name": "Lean Rada",
+    "username": "Kalabasa",
+    "portfolioLink": "https://leanrada.com",
+    "followers": 266,
+    "stars": 2242,
+    "popularity": 2508,
+    "lastFetched": 1761394792988
   }
 ]

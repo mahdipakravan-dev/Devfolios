@@ -53,3 +53,4 @@ Make sure your portfolio satisfies the following requirements before submitting 
 - [talhacodesdev](https://www.talhacodes.dev)
 - [wiscaksono](https://wiscaksono.com)
 - [Kalabasa](https://leanrada.com)
+- [mahdipakravan-dev](https://mpakravan.com/en)
